@@ -1,0 +1,68 @@
+@use "../components/animation" as *;
+@use "../components/mixins" as *;
+
+// a tag buttons
+.a-btn {
+    @include flexbox($placeContent: center, $placeItems: center);
+    padding: 2px 35px;
+    border-radius: 2000px;
+    font-size: 16px;
+    margin: 10px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+    // stop random height increase
+    align-self: center;
+    background-image: none !important;
+    cursor: pointer;
+
+    svg {
+        width: 30px;
+        margin-left: 5px;
+    }
+
+    &-bg {
+        color: var(--white);
+        background-color: var(--main);
+        border: 1px solid var(--main);
+
+        svg {
+            stroke: var(--primary);
+        }
+
+        &:hover {
+            color: var(--main);
+            background-color: transparent;
+
+            svg {
+                stroke: var(--main);
+            }
+        }
+    }
+
+    &-bg-hover {
+        color: var(--main);
+        background-color: transparent;
+        border: 1px solid var(--main);
+
+        svg {
+            stroke: var(--primary);
+        }
+
+        &:hover {
+            color: var(--white);
+            background-color: var(--main);
+
+            svg {
+                stroke: var(--white);
+            }
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        width: 235px;
+        font-size: 14px;
+        padding: 2px 10px;
+    }
+}

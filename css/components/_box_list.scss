@@ -1,0 +1,60 @@
+@use "animation" as *;
+@use "mixins" as *;
+
+.box-list {
+    @include flexbox($justifyContent: space-evenly, $wrap: wrap);
+
+    &-box {
+        @include flexbox($justifyContent: space-between, $direction: column, $alignItems: center);
+        max-width: 300px;
+        width: 100%;
+
+        div {
+            padding: 30px;
+
+            svg {
+                width: 70px;
+                stroke-width: 1px;
+                background-color: var(--white);
+                border-radius: 50%;
+                padding: 10px;
+            }
+        }
+
+        h2,
+        p {
+            text-align: center;
+            margin: 15px 0px 5px;
+        }
+
+        h2 {
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+    }
+
+
+    &-box:first-child {
+        div {
+            background-color: var(--main);
+            clip-path: shape(from 91.49% 43.20%, curve to 85.80% 55.13% with 86.67% 50.00%, smooth to 82.73% 64.94%, smooth to 80.50% 77.39%, smooth to 75.23% 89.47%, smooth to 62.54% 89.60%, smooth to 50.02% 85.26%, smooth to 38.84% 86.46%, smooth to 28.49% 83.77%, smooth to 22.02% 74.57%, smooth to 16.95% 64.98%, smooth to 8.94% 55.27%, smooth to 8.66% 44.65%, smooth to 14.90% 33.81%, smooth to 20.78% 24.91%, smooth to 28.04% 14.71%, smooth to 36.85% 4.36%, smooth to 49.32% 5.50%, smooth to 60.79% 12.74%, smooth to 73.72% 14.41%, smooth to 86.46% 18.49%, smooth to 93.82% 29.92%, smooth to 91.49% 43.20%);
+        }
+    }
+
+    &-box:nth-child(2) {
+        div {
+            background-color: var(--secondary);
+            clip-path: shape(from 84.48% 44.07%,curve to 87.46% 56.90% with 82.44% 50.00%,smooth to 90.28% 70.73%,smooth to 81.58% 81.09%,smooth to 67.48% 82.46%,smooth to 54.94% 82.76%,smooth to 42.51% 90.62%,smooth to 29.84% 90.50%,smooth to 23.68% 77.35%,smooth to 15.15% 66.80%,smooth to 9.54% 56.89%,smooth to 10.36% 43.38%,smooth to 11.94% 30.53%,smooth to 18.47% 18.10%,smooth to 31.00% 15.08%,smooth to 44.84% 17.77%,smooth to 57.70% 9.94%,smooth to 67.53% 12.78%,smooth to 77.23% 23.83%,smooth to 85.66% 31.42%,smooth to 84.48% 44.07%);
+
+        }
+    }
+
+    &-box:nth-child(3) {
+        div {
+            background-color: var(--primary);
+            clip-path: shape(from 97.79% 43.21%, curve to 92.83% 55.33% with 99.35% 50.00%, smooth to 83.66% 65.30%, smooth to 80.63% 77.41%, smooth to 73.03% 84.76%, smooth to 61.01% 88.86%, smooth to 50.39% 90.38%, smooth to 37.84% 89.53%, smooth to 25.97% 87.52%, smooth to 20.41% 76.47%, smooth to 11.94% 66.41%, smooth to 4.23% 56.77%, smooth to 9.86% 44.88%, smooth to 14.42% 33.22%, smooth to 16.81% 20.98%, smooth to 24.72% 10.21%, smooth to 36.55% 5.28%, smooth to 49.51% 8.81%, smooth to 60.03% 15.09%, smooth to 70.62% 18.63%, smooth to 84.33% 21.13%, smooth to 94.13% 29.71%, smooth to 97.79% 43.21%);
+        }
+    }
+}

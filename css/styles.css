@@ -1,0 +1,798 @@
+.elementToFadeOut {
+  animation: fadeOutAnimation 0.3s ease-in-out forwards;
+}
+
+.elementToFadeIn {
+  animation: fadeInAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.a-btn {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  padding: 2px 35px;
+  border-radius: 2000px;
+  font-size: 16px;
+  margin: 10px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+  align-self: center;
+  background-image: none !important;
+  cursor: pointer;
+}
+.a-btn svg {
+  width: 30px;
+  margin-left: 5px;
+}
+.a-btn-bg {
+  color: var(--white);
+  background-color: var(--main);
+  border: 1px solid var(--main);
+}
+.a-btn-bg svg {
+  stroke: var(--primary);
+}
+.a-btn-bg:hover {
+  color: var(--main);
+  background-color: transparent;
+}
+.a-btn-bg:hover svg {
+  stroke: var(--main);
+}
+.a-btn-bg-hover {
+  color: var(--main);
+  background-color: transparent;
+  border: 1px solid var(--main);
+}
+.a-btn-bg-hover svg {
+  stroke: var(--primary);
+}
+.a-btn-bg-hover:hover {
+  color: var(--white);
+  background-color: var(--main);
+}
+.a-btn-bg-hover:hover svg {
+  stroke: var(--white);
+}
+@media screen and (max-width: 400px) {
+  .a-btn {
+    width: 235px;
+    font-size: 14px;
+    padding: 2px 10px;
+  }
+}
+
+* {
+  font-family: Verdana, Geneva, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  color: var(--main);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h1,
+h2 {
+  letter-spacing: 1px;
+  font-weight: 600;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+h1,
+h2,
+h3,
+p {
+  width: 100%;
+}
+
+p {
+  line-height: 24px;
+  font-size: 15px;
+  text-wrap: balance;
+}
+
+strong {
+  font-weight: 900;
+}
+
+a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: var(--primary);
+  padding-bottom: 2px;
+  background-image: linear-gradient(var(--primary), var(--primary));
+  background-size: 0 0.1em;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+a:hover {
+  text-decoration: none;
+  background-size: 100% 0.1em;
+  color: var(--primary);
+}
+a:focus {
+  text-decoration: none;
+  background-size: 100% 1px;
+  color: var(--white);
+}
+
+.page-header div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.page-header-btn {
+  margin-left: -10px;
+}
+.page-header p {
+  font-size: 16px;
+  max-width: 400px;
+  line-height: 32px;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.page-header h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin: 10px 0px 20px;
+}
+@media only screen and (max-width: 590px) {
+  .page-header h1 {
+    font-size: 45px;
+  }
+}
+.page-header small {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin: 10px 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  place-content: left;
+  place-items: left;
+  flex-wrap: nowrap;
+  padding: var(--container-padding);
+}
+.container-light {
+  background-color: var(--bg);
+}
+.container-dark {
+  background-color: var(--main);
+}
+.container-dark h1,
+.container-dark h2,
+.container-dark h3,
+.container-dark p {
+  color: var(--white);
+}
+.container-dark .page-header h2 {
+  color: var(--primary) !important;
+}
+.container-dark svg {
+  stroke: var(--white);
+  fill: var(--white);
+}
+.container-dark .hero-icon {
+  fill: none !important;
+  stroke-width: 0.7px !important;
+}
+.container-dark a {
+  color: var(--primary);
+  color: var(--primary);
+  background-image: linear-gradient(var(--primary), var(--primary));
+}
+.container-dark a:hover {
+  color: var(--primary);
+}
+.container-dark a:focus {
+  color: var(--primary);
+}
+.container-dark .a-btn-bg {
+  color: var(--main);
+  background-color: var(--white);
+  border: 1px solid var(--white);
+}
+.container-dark .a-btn-bg svg {
+  stroke: var(--main);
+}
+.container-dark .a-btn-bg:hover {
+  color: var(--white);
+  background-color: var(--main);
+}
+.container-dark .a-btn-bg:hover svg {
+  stroke: var(--white);
+}
+.container-divide {
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1000px) {
+  .container-divide {
+    flex-direction: column;
+  }
+}
+.container-divide-img {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px;
+}
+.container-divide-img .page-header {
+  width: 50%;
+  padding: var(--container-padding);
+}
+.container-divide-img .page-header p {
+  max-width: unset;
+}
+.container-divide-img .blob-container {
+  bottom: 80px;
+  z-index: 99999;
+}
+.container-divide-img .blob-container-full-height {
+  bottom: 0px !important;
+  z-index: 1 !important;
+}
+.container-divide-img-img {
+  width: 50%;
+}
+.container-divide-img-img img {
+  width: 100%;
+}
+@media only screen and (max-width: 1000px) {
+  .container-divide-img {
+    flex-direction: column;
+  }
+  .container-divide-img .blob-container {
+    bottom: 0px;
+  }
+  .container-divide-img-img {
+    width: 100%;
+    background-position: 20% 50%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container-divide-img .page-header {
+    width: 100%;
+  }
+  .container-divide-img .page-header p {
+    max-width: 500px;
+  }
+}
+
+header,
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  background-color: var(--white);
+  padding: 15px 40px;
+  top: 0;
+  z-index: 999;
+  align-items: start;
+}
+header nav,
+footer nav {
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+  padding: 12px 0px 0px;
+  flex-wrap: wrap;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 99999999;
+}
+header nav a,
+footer nav a {
+  min-width: unset;
+  max-width: 140px;
+  width: 100%;
+  height: 35px;
+  margin: 3px 10px;
+  padding: 0;
+  text-transform: uppercase;
+  background-image: linear-gradient(var(--main), var(--main));
+  background-position: 50% 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  color: var(--main);
+}
+header nav a:hover,
+footer nav a:hover {
+  background-size: 100% 1px;
+  color: var(--main);
+}
+header nav a:hover svg,
+footer nav a:hover svg {
+  stroke: var(--main);
+}
+header nav a:hover i,
+footer nav a:hover i {
+  color: var(--main);
+}
+header nav a svg,
+footer nav a svg {
+  width: 19px;
+  margin-right: 5px;
+  display: none;
+}
+header nav a i,
+footer nav a i {
+  font-size: 19px;
+  margin-right: 5px;
+  display: none !important;
+}
+header nav .active,
+footer nav .active {
+  background-color: var(--grey);
+  color: var(--primary);
+}
+header nav .active svg,
+footer nav .active svg {
+  stroke: var(--primary);
+}
+header div,
+footer div {
+  max-width: 180px;
+  width: 100%;
+  z-index: 99999999;
+}
+header div img,
+footer div img {
+  max-width: 160px;
+  width: 100%;
+}
+header div:first-child,
+footer div:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+header div:last-child,
+footer div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+header .a-btn,
+footer .a-btn {
+  z-index: 99999999;
+  white-space: nowrap;
+  margin-left: 15px;
+  max-width: 200px;
+  line-height: 30px;
+  padding: 6px 20px;
+  font-weight: 400;
+}
+
+footer {
+  position: unset;
+  background-color: var(--main);
+  align-content: center;
+}
+footer nav {
+  align-self: center;
+  padding: 0px;
+}
+footer nav a {
+  color: var(--white);
+  background-image: linear-gradient(var(--white), var(--white));
+  text-transform: none;
+}
+footer nav a:hover {
+  color: var(--white);
+}
+footer div:last-child {
+  align-self: center;
+}
+footer .a-btn {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+footer .a-btn:hover {
+  background-color: var(--white);
+}
+
+@media only screen and (max-width: 969px) {
+  header #contactBtn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 710px) {
+  #nav {
+    visibility: visible;
+  }
+  #navBtn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 709px) {
+  #nav {
+    visibility: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 94px;
+    right: 0px;
+    opacity: 0;
+    place-content: center;
+    place-items: start;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+  #nav.showNav {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+  }
+  #nav.showNav a {
+    margin: 10px;
+  }
+  #navBtn {
+    display: flex;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+}
+:root {
+  /* Dynamic size that scales beautifully between mobile and desktop */
+  --blob-size: clamp(280px, 45vw, 100%);
+}
+
+.blob-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: var(--blob-size);
+  height: calc(var(--blob-size) * 0.85);
+  filter: drop-shadow(0px 3px 5px rgba(11, 34, 72, 0.3));
+}
+.blob-container .blob-img,
+.blob-container .blob {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+.blob-container .blob-img {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: shape(from 88.22% 44.54%, curve to 92.71% 56.77% with 89.28% 50%, smooth to 92.55% 69.29%, smooth to 81.12% 75.95%, smooth to 69.43% 80.5%, smooth to 60.52% 86.03%, smooth to 49.65% 90.38%, smooth to 37.31% 92.46%, smooth to 26.11% 87.52%, smooth to 20.2% 76.45%, smooth to 17.59% 64.93%, smooth to 11.81% 54.96%, smooth to 6.23% 43.4%, smooth to 6.93% 30.16%, smooth to 14.86% 19.98%, smooth to 27.32% 15.4%, smooth to 38.64% 9.81%, smooth to 50.27% 3.37%, smooth to 61.72% 7.72%, smooth to 74.26% 13.48%, smooth to 85.42% 19.04%, smooth to 87.97% 32.08%, smooth to 88.22% 44.54%);
+}
+.blob-container .blob-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blob-container-full-height {
+  position: relative;
+  height: 100%;
+  filter: drop-shadow(1px 6px 3px rgba(11, 34, 72, 0.1));
+}
+.blob-container-full-height .blob-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: url(#wave-image-clip);
+  -webkit-clip-path: url(#wave-image-clip);
+  z-index: 5;
+}
+.blob-container-full-height .blob-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.blob-container-full-height .blob-background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 80%;
+  height: 80%;
+  background-color: var(--secondary);
+  z-index: 2;
+  clip-path: shape(from 90.86% 40.95%, curve to 90.49% 58.9% with 88% 50%, smooth to 86.98% 74.39%, smooth to 74.06% 86.18%, smooth to 58.57% 87.43%, smooth to 40.82% 88.9%, smooth to 25.39% 87.59%, smooth to 16.2% 73.04%, smooth to 12.19% 57.61%, smooth to 12.47% 42.51%, smooth to 16.18% 26.78%, smooth to 25.29% 12.58%, smooth to 41.02% 12.14%, smooth to 57.93% 14.69%, smooth to 72.68% 16.11%, smooth to 86.61% 26.19%, smooth to 90.86% 40.95%);
+}
+.blob-container-full-height .blob-background:last-child {
+  bottom: -16%;
+  right: 21%;
+  background-color: var(--main);
+  z-index: 1;
+  clip-path: shape(from 95.44% 40.82%, curve to 89.03% 56.52% with 96.57% 50%, smooth to 82.19% 72.97%, smooth to 73.76% 84.09%, smooth to 57.31% 89.62%, smooth to 43.82% 86.89%, smooth to 30.81% 77.93%, smooth to 16.77% 71.39%, smooth to 13.3% 58.37%, smooth to 12.06% 41.12%, smooth to 17.17% 29.73%, smooth to 29.25% 16.01%, smooth to 40.64% 2.53%, smooth to 56.84% 8.61%, smooth to 72.36% 17.97%, smooth to 87.67% 25.31%, smooth to 95.44% 40.82%);
+  clip-path: shape(from 84.38% 42.55%, curve to 86.73% 58.43% with 82.78% 50%, smooth to 82.92% 71%, smooth to 71.66% 84.51%, smooth to 59.09% 90.22%, smooth to 40.73% 90.66%, smooth to 28.47% 84.63%, smooth to 20.5% 69.4%, smooth to 11.92% 57.14%, smooth to 12.19% 42.97%, smooth to 17.75% 27.69%, smooth to 25.81% 13.2%, smooth to 41.09% 10.47%, smooth to 57.68% 13.44%, smooth to 70.6% 18.54%, smooth to 80.9% 29.64%, smooth to 84.38% 42.55%);
+}
+.blob {
+  background-color: var(--main);
+  z-index: 1;
+}
+.blob-left-bottom {
+  align-self: end;
+  justify-self: start;
+  width: 69%;
+  height: 63%;
+  transform: translate(0%, 3%);
+  clip-path: shape(from 5.64% 51.63%, curve to 10.46% 38.95% with 2.18% 43.96%, smooth to 22.48% 29.13%, smooth to 30.3% 18.58%, smooth to 41.17% 10.55%, smooth to 55.66% 7.56%, smooth to 69.92% 10.98%, smooth to 82.64% 20.05%, smooth to 88.41% 33.18%, smooth to 88.68% 48.17%, smooth to 89.64% 62.75%, smooth to 81.56% 72.79%, smooth to 70.23% 83.07%, smooth to 59.81% 94.49%, smooth to 43.97% 97.2%, smooth to 32.25% 87.16%, smooth to 18.76% 77.24%, smooth to 8.87% 67.98%, smooth to 5.64% 51.63%);
+}
+.blob-right-top {
+  align-self: start;
+  justify-self: end;
+  width: 63%;
+  height: 50%;
+  transform: translate(4%, -7%);
+  clip-path: shape(from 14.89% 51.51%, curve to 15.49% 39.36% with 13.39% 45.37%, smooth to 19.49% 26.22%, smooth to 26.47% 12.6%, smooth to 39.91% 10.34%, smooth to 55.63% 11.3%, smooth to 70.59% 10.44%, smooth to 83% 19.25%, smooth to 90.56% 32.9%, smooth to 89.67% 47.36%, smooth to 86.37% 61.71%, smooth to 82.51% 74.72%, smooth to 73.01% 86.35%, smooth to 59.85% 91.42%, smooth to 45.3% 88.75%, smooth to 30.68% 86.35%, smooth to 21.23% 77.71%, smooth to 18.05% 63.58%, smooth to 14.89% 51.51%);
+}
+
+.box-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.box-list-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 300px;
+  width: 100%;
+}
+.box-list-box div {
+  padding: 30px;
+}
+.box-list-box div svg {
+  width: 70px;
+  stroke-width: 1px;
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 10px;
+}
+.box-list-box h2,
+.box-list-box p {
+  text-align: center;
+  margin: 15px 0px 5px;
+}
+.box-list-box h2 {
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.box-list-box:first-child div {
+  background-color: var(--main);
+  clip-path: shape(from 91.49% 43.2%, curve to 85.8% 55.13% with 86.67% 50%, smooth to 82.73% 64.94%, smooth to 80.5% 77.39%, smooth to 75.23% 89.47%, smooth to 62.54% 89.6%, smooth to 50.02% 85.26%, smooth to 38.84% 86.46%, smooth to 28.49% 83.77%, smooth to 22.02% 74.57%, smooth to 16.95% 64.98%, smooth to 8.94% 55.27%, smooth to 8.66% 44.65%, smooth to 14.9% 33.81%, smooth to 20.78% 24.91%, smooth to 28.04% 14.71%, smooth to 36.85% 4.36%, smooth to 49.32% 5.5%, smooth to 60.79% 12.74%, smooth to 73.72% 14.41%, smooth to 86.46% 18.49%, smooth to 93.82% 29.92%, smooth to 91.49% 43.2%);
+}
+.box-list-box:nth-child(2) div {
+  background-color: var(--secondary);
+  clip-path: shape(from 84.48% 44.07%, curve to 87.46% 56.9% with 82.44% 50%, smooth to 90.28% 70.73%, smooth to 81.58% 81.09%, smooth to 67.48% 82.46%, smooth to 54.94% 82.76%, smooth to 42.51% 90.62%, smooth to 29.84% 90.5%, smooth to 23.68% 77.35%, smooth to 15.15% 66.8%, smooth to 9.54% 56.89%, smooth to 10.36% 43.38%, smooth to 11.94% 30.53%, smooth to 18.47% 18.1%, smooth to 31% 15.08%, smooth to 44.84% 17.77%, smooth to 57.7% 9.94%, smooth to 67.53% 12.78%, smooth to 77.23% 23.83%, smooth to 85.66% 31.42%, smooth to 84.48% 44.07%);
+}
+.box-list-box:nth-child(3) div {
+  background-color: var(--primary);
+  clip-path: shape(from 97.79% 43.21%, curve to 92.83% 55.33% with 99.35% 50%, smooth to 83.66% 65.3%, smooth to 80.63% 77.41%, smooth to 73.03% 84.76%, smooth to 61.01% 88.86%, smooth to 50.39% 90.38%, smooth to 37.84% 89.53%, smooth to 25.97% 87.52%, smooth to 20.41% 76.47%, smooth to 11.94% 66.41%, smooth to 4.23% 56.77%, smooth to 9.86% 44.88%, smooth to 14.42% 33.22%, smooth to 16.81% 20.98%, smooth to 24.72% 10.21%, smooth to 36.55% 5.28%, smooth to 49.51% 8.81%, smooth to 60.03% 15.09%, smooth to 70.62% 18.63%, smooth to 84.33% 21.13%, smooth to 94.13% 29.71%, smooth to 97.79% 43.21%);
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  opacity: 1;
+}
+@media only screen and (max-width: 422px) {
+  .cards {
+    justify-content: center;
+  }
+}
+.cards div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 350px;
+  width: 100%;
+  border: 1px solid #d2d3dd;
+  margin: 5px;
+  flex: 1;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.cards div div {
+  border: 0px solid var(--white);
+  padding: 20px 10px 20px;
+  background-color: var(--white);
+  margin: 0px;
+  flex: unset;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-between;
+}
+.cards div div div {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0px 10px;
+}
+.cards div div p {
+  margin: 5px 0px;
+  display: flex;
+  font-size: 14px;
+}
+.cards div div p svg {
+  width: 20px;
+  margin-right: 5px;
+}
+.cards div div p:first-child {
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 1.5px;
+}
+.cards div div p:last-child {
+  font-size: 15px;
+}
+.cards div div h3 {
+  margin: 5px 0 10px;
+  font-weight: 600;
+  font-size: 20px;
+  max-width: 80%;
+}
+.cards div div a {
+  font-size: 14px;
+  max-width: 185px;
+  width: 100%;
+  align-self: start;
+  padding: 0px 10px;
+  height: 35px;
+}
+.cards div div a svg {
+  width: 30px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  align-items: center;
+}
+nav a,
+nav button {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  flex-wrap: nowrap;
+  line-height: 25px;
+  font-size: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 180px;
+  margin: 10px;
+  padding: 6px 25px;
+  border-radius: 2px;
+  font-weight: 400;
+  text-align: center;
+  background-color: transparent;
+  border: 0px solid transparent;
+  cursor: pointer;
+  background-image: linear-gradient(var(--main), var(--main));
+  background-position: 50% 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  color: var(--main);
+}
+nav a:hover,
+nav button:hover {
+  background-size: 100% 1px;
+  color: var(--main);
+}
+nav a:hover svg,
+nav button:hover svg {
+  stroke: var(--main);
+}
+nav a:hover i,
+nav button:hover i {
+  color: var(--main);
+}
+nav a.active,
+nav button.active,
+nav a.active-events,
+nav button.active-events {
+  background-size: 100% 100%;
+  color: var(--white);
+}
+
+.index-header div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.index-header-btn {
+  margin-left: -10px;
+}
+.index-header p {
+  font-size: 16px;
+  max-width: 400px;
+  line-height: 32px;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.index-header h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin: 10px 0px 20px;
+}
+@media only screen and (max-width: 590px) {
+  .index-header h1 {
+    font-size: 45px;
+  }
+}
+.index-header small {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin: 10px 0px;
+}
+
+:root {
+  --main: #10507b;
+  --main: #0b2248;
+  --primary: #5da1f3;
+  --secondary: #a6cefb;
+  --white: #fff;
+  --bg: #e6effa;
+  --container-padding: 30px 40px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,8 @@
+@use "../../components/animation" as *;
+@use "../../components/mixins" as *;
+
+.index {
+    &-header {
+        @include pageHeader($hSizeOne: 50px);
+    }
+}

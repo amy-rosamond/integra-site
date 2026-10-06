@@ -1,0 +1,84 @@
+@use '../components/animation' as *;
+@use '../components/mixins' as *;
+
+
+.cards {
+    @include flexbox($wrap: wrap);
+    padding-top: 0px;
+    opacity: 1;
+
+    @media only screen and (max-width: 422px) {
+        justify-content: center;
+    }
+
+    div {
+        @include flexbox($direction: column);
+        max-width: 350px;
+        width: 100%;
+        border: 1px solid #d2d3dd;
+        margin: 5px;
+        flex: 1;
+        height: fit-content;
+
+        div {
+            border: 0px solid var(--white);
+            padding: 20px 10px 20px;
+            background-color: var(--white);
+            margin: 0px;
+            flex: unset;
+            height: fit-content;
+            justify-content: space-between;
+
+            div {
+                height: fit-content;
+                padding: 0px 10px;
+            }
+
+            p {
+                margin: 5px 0px;
+                display: flex;
+                font-size: 14px;
+
+                svg {
+                    width: 20px;
+                    margin-right: 5px;
+                }
+            }
+
+            p:first-child {
+                text-transform: uppercase;
+                color: var(--primary);
+                letter-spacing: 1.5px;
+            }
+
+            p:last-child {
+                font-size: 15px;
+            }
+
+            h3 {
+                margin: 5px 0 10px;
+                font-weight: 600;
+                font-size: 20px;
+                max-width: 80%;
+            }
+
+            a {
+                font-size: 14px;
+                max-width: 185px;
+                width: 100%;
+                align-self: start;
+                padding: 0px 10px;
+                height: 35px;
+
+
+                svg {
+                    width: 30px;
+                }
+            }
+        }
+
+        // div:first-child {
+        //     padding: 0;
+        // }
+    }
+}

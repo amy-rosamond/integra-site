@@ -1,0 +1,24 @@
+@use "../css/general/buttons";
+@use "../css/general/tags";
+
+@use "../css/layout/container";
+@use "../css/layout/header_footer";
+
+@use "../css/components/blobs";
+@use "../css/components/box_list";
+@use "../css/components/cards";
+@use "../css/components/nav";
+
+@use "../css/layout/pages/index";
+
+:root {
+    --main: #10507b;
+    --main: #0b2248;
+    --primary: #5da1f3;
+    --secondary: #a6cefb;
+    --white: #fff;
+    --bg: #e6effa;
+
+
+    --container-padding: 30px 40px;
+}

@@ -1,0 +1,103 @@
+@mixin underline {
+    background-image:linear-gradient(var(--main), var(--main));
+    background-position: 50% 100%;
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    color: var(--main);
+
+    &:hover {
+        background-size: 100% 1px;
+        color: var(--main);
+
+        svg {
+            stroke: var(--main);
+        }
+
+        i {
+            color: var(--main);
+        }
+    }
+}
+
+@mixin backgroundFromBottomUnderline {
+    background-image: linear-gradient(var(--main), var(--main));
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2%;
+    color: var(--primary);
+
+    &:hover {
+        background-size: 100% 100%;
+        color: var(--primary);
+
+        svg {
+            stroke: var(--primary);
+        }
+
+        i {
+            color: var(--primary);
+        }
+    }
+}
+
+@mixin backgroundFromCenter {
+    background-image: linear-gradient(var(--white), var(--white));
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    color: var(--white);
+
+    &:hover {
+        background-size: 100% 100%;
+        color: var(--primary);
+
+        svg {
+            stroke: var(--primary);
+        }
+
+        i {
+            color: var(--primary);
+        }
+    }
+}
+
+@mixin backgroundFromCenterPrimary {
+    background-image: linear-gradient(var(--primary), var(--primary));
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    color: var(--primary);
+
+    &:hover {
+        background-size: 100% 100%;
+        color: var(--white);
+
+        svg {
+            stroke: var(--white);
+        }
+
+        i {
+            color: var(--white);
+        }
+    }
+}
+
+
+//for event JS
+.elementToFadeOut {
+    animation: fadeOutAnimation 0.3s ease-in-out forwards;
+}
+
+.elementToFadeIn {
+    animation: fadeInAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOutAnimation {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

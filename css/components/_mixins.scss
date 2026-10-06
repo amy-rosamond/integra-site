@@ -1,0 +1,88 @@
+@mixin flexbox($display: flex,
+    $direction: row,
+    $placeContent: null,
+    $placeItems: null,
+    $wrap: nowrap,
+    // $shrink: 0,
+    // $grow: 0,
+    $alignContent: null,
+    $justifyContent: null,
+    $alignItems: null,
+    $justifyItems: null) {
+
+    display: $display;
+    flex-direction: $direction;
+
+    @if $placeContent ==null {
+        @if $alignContent {
+            align-content: $alignContent;
+        }
+
+        @if $justifyContent {
+            justify-content: $justifyContent;
+        }
+    }
+
+    @else {
+        place-content: $placeContent;
+    }
+
+    @if $placeItems ==null {
+        @if $alignItems {
+            align-items: $alignItems;
+        }
+
+        @if $justifyItems {
+            justify-items: $justifyItems;
+        }
+    }
+
+    @else {
+        place-items: $placeItems;
+    }
+
+    flex-wrap: $wrap;
+    // flex-shrink: $shrink;
+    // flex-grow: $grow;
+}
+
+@mixin pageHeader($pSizeOne: 12px,
+    $pSizeTwo: 16px,
+    $hSizeOne: 40px,
+    $small: 14px,
+    $lineColor: var(--primary)) {
+
+    div {
+        @include flexbox($direction: row, $wrap: wrap);
+    }
+
+    &-btn {
+        margin-left: -10px;
+    }
+
+    p {
+        font-size: $pSizeTwo;
+        max-width: 400px;
+        line-height: 32px;
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+
+    h1 {
+        font-size: $hSizeOne;
+        letter-spacing: 2px;
+        margin: 10px 0px 20px;
+
+        @media only screen and (max-width: 590px) {
+            font-size: 45px;
+        }
+    }
+
+    small {
+        font-size: $small;
+        font-weight: 600;
+        color: var(--primary);
+        letter-spacing: 2px;
+        margin: 10px 0px;
+    }
+}
