@@ -26,7 +26,7 @@ include('includes/events/events-array.php');
         <div class="blob-container">
             <div class="blob blob-left-bottom"></div>
 
-            <div class="blob blob-right-top"></div>
+            <div class="blob blob-right-top" style="clip-path: shape(from 95.58% 43.30%,curve to 93.90% 56.21% with 95.49% 50.00%,smooth to 91.34% 69.19%,smooth to 85.11% 80.19%,smooth to 72.54% 83.90%,smooth to 60.15% 84.27%,smooth to 49.37% 89.56%,smooth to 37.80% 91.76%,smooth to 25.44% 87.70%,smooth to 14.48% 80.76%,smooth to 12.77% 67.91%,smooth to 9.25% 55.06%,smooth to 7.00% 44.28%,smooth to 10.58% 31.46%,smooth to 15.27% 20.12%,smooth to 26.63% 14.13%,smooth to 38.36% 9.97%,smooth to 49.74% 9.41%,smooth to 61.35% 11.86%,smooth to 70.24% 17.77%,smooth to 77.71% 26.22%,smooth to 88.87% 32.99%,smooth to 95.58% 43.30%);"></div>
 
             <div class="blob-img">
                 <img src="https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/events/radisson-blu-sheffield.jpg" alt="Events">
@@ -34,27 +34,28 @@ include('includes/events/events-array.php');
         </div>
     </div>
 </div>
-<div class="container" style="padding-block: 0px;position: relative; bottom: 3%;">
+<div class="container container-light">
     <nav>
 
         <?php
 
         foreach ($navBarEvents as $a) {
             // onClick="{( => { lenis?.scrollTo("' . $a['href'] . '");} }" 
-            echo '<button id="' . $a['eventDisplay'] . '" onClick="eventDisplay(\'' . $a['eventDisplay'] . '\');" class="' . $a['class'] . '">' . $a['name'] . '</button>';
+            echo '<button id="' . $a['eventDisplay'] . '" onClick="eventDisplay(\'' . $a['eventDisplay'] . '\');" class="a-btn a-btn-bg-hover ' . $a['class'] . '">' . $a['name'] . '</button>';
         }
 
         ?>
 
     </nav>
 </div>
-<div id="eventsContainer" class="container" style="padding-top: 0px;">
+<div id="eventsContainer" class="container container-light" style="padding-top: 0px;">
     <div class="cards">
         <?php
 
         $integraConference26 = new cardItem(
             'conference',
             'https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/events/radisson-blu-sheffield.jpg',
+            '25 Nov 2026',
             'Conference',
             'Integra User Conference 2026',
             'Radisson Blu, Sheffield',
@@ -65,7 +66,8 @@ include('includes/events/events-array.php');
 
         $midYearUserMeeting = new cardItem(
             'user',
-            'https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/events/radisson-blu-sheffield.jpg',
+            'https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/people/people-3.jpg',
+            '21 April 2023',
             'User Meeting',
             'Mid Year User Meeting',
             'Nottingham Belfty Hotel',
@@ -76,7 +78,8 @@ include('includes/events/events-array.php');
 
         $committee = new cardItem(
             'committee',
-            'https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/events/radisson-blu-sheffield.jpg',
+            'https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/people/people-2.jpg',
+            '14 July 2023',
             'Committee Meeting',
             'Committee',
             'Mailbox Office Birmingham',
@@ -89,6 +92,11 @@ include('includes/events/events-array.php');
     </div>
 </div>
 
+<?php
+
+include('footer.php');
+
+?>
 
 <script src="script/events.js?r=123"></script>
 

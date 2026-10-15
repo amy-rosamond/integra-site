@@ -28,7 +28,7 @@
   place-content: center;
   place-items: center;
   flex-wrap: nowrap;
-  padding: 2px 35px;
+  padding: 0px 35px;
   border-radius: 2000px;
   font-size: 16px;
   margin: 10px;
@@ -83,7 +83,7 @@
 }
 
 * {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: "Kanit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -112,9 +112,14 @@ h2 {
 
 h1,
 h2 {
+  font-family: var(--header-font);
   letter-spacing: 1px;
   font-weight: 600;
   animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+h3 {
+  font-family: var(--header-font);
 }
 
 h1,
@@ -187,6 +192,7 @@ a:focus {
   color: var(--primary);
   letter-spacing: 2px;
   margin: 10px 0px;
+  font-family: var(--header-font);
 }
 
 .container {
@@ -196,6 +202,9 @@ a:focus {
   place-items: left;
   flex-wrap: nowrap;
   padding: var(--container-padding);
+}
+.container:not(:has(.container-divide-img, .container-divide)) .page-header p {
+  max-width: unset;
 }
 .container-light {
   background-color: var(--bg);
@@ -269,8 +278,7 @@ a:focus {
   max-width: unset;
 }
 .container-divide-img .blob-container {
-  bottom: 80px;
-  z-index: 99999;
+  transform: translate(0px, -50px);
 }
 .container-divide-img .blob-container-full-height {
   bottom: 0px !important;
@@ -278,28 +286,56 @@ a:focus {
 }
 .container-divide-img-img {
   width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .container-divide-img-img img {
   width: 100%;
 }
+.container-divide-img-img:has(.logo) {
+  display: flex;
+  justify-content: center;
+}
+.container-divide-img-img:has(.logo) .logo {
+  max-width: 500px;
+  float: right;
+  padding-right: 20px;
+}
 @media only screen and (max-width: 1000px) {
+  .container-divide-img .blob-container {
+    transform: translate(0px, -18px);
+  }
+}
+@media only screen and (max-width: 800px) {
   .container-divide-img {
     flex-direction: column;
+    padding: var(--container-padding);
   }
   .container-divide-img .blob-container {
-    bottom: 0px;
+    padding-top: 0px;
+    width: 100%;
   }
   .container-divide-img-img {
     width: 100%;
-    background-position: 20% 50%;
-    height: -moz-fit-content;
-    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  .container-divide-img-img:has(.logo) {
+    justify-content: start;
+  }
+  .container-divide-img-img:has(.logo) .logo {
+    max-width: 200px;
   }
   .container-divide-img .page-header {
     width: 100%;
+    padding: 0;
   }
   .container-divide-img .page-header p {
     max-width: 500px;
+  }
+  .container-divide-img :root {
+    /* Dynamic size that scales beautifully between mobile and desktop */
+    --blob-size: 100%;
   }
 }
 
@@ -309,7 +345,6 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
-  background-color: var(--white);
   padding: 15px 40px;
   top: 0;
   z-index: 999;
@@ -488,11 +523,11 @@ footer .a-btn:hover {
 }
 :root {
   /* Dynamic size that scales beautifully between mobile and desktop */
-  --blob-size: clamp(280px, 45vw, 100%);
+  --blob-size: 80%;
 }
 
 .blob-container {
-  position: relative;
+  position: static;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -510,7 +545,7 @@ footer .a-btn:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  clip-path: shape(from 88.22% 44.54%, curve to 92.71% 56.77% with 89.28% 50%, smooth to 92.55% 69.29%, smooth to 81.12% 75.95%, smooth to 69.43% 80.5%, smooth to 60.52% 86.03%, smooth to 49.65% 90.38%, smooth to 37.31% 92.46%, smooth to 26.11% 87.52%, smooth to 20.2% 76.45%, smooth to 17.59% 64.93%, smooth to 11.81% 54.96%, smooth to 6.23% 43.4%, smooth to 6.93% 30.16%, smooth to 14.86% 19.98%, smooth to 27.32% 15.4%, smooth to 38.64% 9.81%, smooth to 50.27% 3.37%, smooth to 61.72% 7.72%, smooth to 74.26% 13.48%, smooth to 85.42% 19.04%, smooth to 87.97% 32.08%, smooth to 88.22% 44.54%);
+  clip-path: shape(from 95.36% 43.67%, curve to 94.09% 55.95% with 97.63% 50%, smooth to 89.05% 68.02%, smooth to 80.86% 76.02%, smooth to 72.32% 86.34%, smooth to 63.64% 96.16%, smooth to 50.82% 91.85%, smooth to 38.53% 87.5%, smooth to 25.17% 87.84%, smooth to 18.77% 78.23%, smooth to 12.39% 66.37%, smooth to 3.4% 56.56%, smooth to 6.17% 44.25%, smooth to 13.7% 33.5%, smooth to 18.76% 22.51%, smooth to 25.8% 12.03%, smooth to 37.76% 11.09%, smooth to 50.83% 8.89%, smooth to 63.37% 4.66%, smooth to 72.63% 13.53%, smooth to 80.27% 24.09%, smooth to 89.19% 32.33%, smooth to 95.36% 43.67%);
 }
 .blob-container .blob-img img {
   width: 100%;
@@ -554,7 +589,6 @@ footer .a-btn:hover {
   right: 21%;
   background-color: var(--main);
   z-index: 1;
-  clip-path: shape(from 95.44% 40.82%, curve to 89.03% 56.52% with 96.57% 50%, smooth to 82.19% 72.97%, smooth to 73.76% 84.09%, smooth to 57.31% 89.62%, smooth to 43.82% 86.89%, smooth to 30.81% 77.93%, smooth to 16.77% 71.39%, smooth to 13.3% 58.37%, smooth to 12.06% 41.12%, smooth to 17.17% 29.73%, smooth to 29.25% 16.01%, smooth to 40.64% 2.53%, smooth to 56.84% 8.61%, smooth to 72.36% 17.97%, smooth to 87.67% 25.31%, smooth to 95.44% 40.82%);
   clip-path: shape(from 84.38% 42.55%, curve to 86.73% 58.43% with 82.78% 50%, smooth to 82.92% 71%, smooth to 71.66% 84.51%, smooth to 59.09% 90.22%, smooth to 40.73% 90.66%, smooth to 28.47% 84.63%, smooth to 20.5% 69.4%, smooth to 11.92% 57.14%, smooth to 12.19% 42.97%, smooth to 17.75% 27.69%, smooth to 25.81% 13.2%, smooth to 41.09% 10.47%, smooth to 57.68% 13.44%, smooth to 70.6% 18.54%, smooth to 80.9% 29.64%, smooth to 84.38% 42.55%);
 }
 .blob {
@@ -643,28 +677,60 @@ footer .a-btn:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  max-width: 350px;
-  width: 100%;
-  border: 1px solid #d2d3dd;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
   margin: 5px;
-  flex: 1;
-  height: -moz-fit-content;
-  height: fit-content;
+  flex: 1 1 350px;
+  background-color: #fff;
+}
+.cards div img {
+  height: 235px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 9px 9px 0px 0px;
 }
 .cards div div {
   border: 0px solid var(--white);
-  padding: 20px 10px 20px;
+  padding: 20px 20px 20px;
   background-color: var(--white);
   margin: 0px;
   flex: unset;
   height: -moz-fit-content;
   height: fit-content;
   justify-content: space-between;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 .cards div div div {
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0px 10px;
+  height: 0px;
+  padding: 15px 0;
+}
+.cards div div div p,
+.cards div div div span {
+  position: relative;
+  bottom: 88px;
+  right: 5px;
+  background-color: var(--secondary);
+  width: 100px;
+  clip-path: shape(from 88.59% 45%, curve to 95.01% 56.88% with 93.14% 50%, smooth to 88.16% 66.35%, smooth to 80.76% 77.97%, smooth to 74.43% 86.89%, smooth to 61.13% 87.44%, smooth to 49.55% 91.27%, smooth to 37.5% 92.59%, smooth to 25.85% 87.51%, smooth to 18.71% 77.7%, smooth to 13.28% 66.53%, smooth to 5.97% 55.95%, smooth to 8.38% 44.75%, smooth to 12.37% 32.05%, smooth to 16.06% 20.95%, smooth to 25.76% 11.6%, smooth to 36.5% 4.11%, smooth to 49.8% 3.72%, smooth to 62.94% 6.28%, smooth to 75.13% 10.94%, smooth to 82.96% 20.94%, smooth to 84.57% 33.72%, smooth to 88.59% 45%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 18px;
+  word-spacing: 1000px;
+}
+.cards div div div p svg,
+.cards div div div span svg {
+  width: 50px;
+  stroke-width: 0.8px;
+}
+.cards div div div span {
+  bottom: 71px;
+  clip-path: shape(from 95.07% 43.66%, curve to 91% 55.14% with 96.99% 50%, smooth to 85.7% 66.83%, smooth to 83.39% 79.23%, smooth to 72.73% 84.04%, smooth to 61.06% 90.99%, smooth to 50.65% 94.46%, smooth to 38.75% 88.32%, smooth to 29.34% 82.52%, smooth to 22.89% 73.7%, smooth to 12.17% 66.28%, smooth to 7.29% 56.75%, smooth to 9.68% 43.95%, smooth to 14.35% 34.28%, smooth to 23.42% 27.02%, smooth to 30.39% 19%, smooth to 38.45% 8.12%, smooth to 49.28% 6.63%, smooth to 60.04% 14.88%, smooth to 72.71% 16.26%, smooth to 85.37% 19.38%, smooth to 91.52% 30.85%, smooth to 95.07% 43.66%);
 }
 .cards div div p {
   margin: 5px 0px;
@@ -675,7 +741,7 @@ footer .a-btn:hover {
   width: 20px;
   margin-right: 5px;
 }
-.cards div div p:first-child {
+.cards div div small {
   text-transform: uppercase;
   color: var(--primary);
   letter-spacing: 1.5px;
@@ -696,6 +762,7 @@ footer .a-btn:hover {
   align-self: start;
   padding: 0px 10px;
   height: 35px;
+  margin-inline: 0px;
 }
 .cards div div a svg {
   width: 30px;
@@ -747,10 +814,14 @@ nav a:hover i,
 nav button:hover i {
   color: var(--main);
 }
+nav button {
+  font-size: 14px !important;
+}
 nav a.active,
 nav button.active,
 nav a.active-events,
 nav button.active-events {
+  background-image: linear-gradient(var(--main), var(--main)) !important;
   background-size: 100% 100%;
   color: var(--white);
 }
@@ -785,6 +856,7 @@ nav button.active-events {
   color: var(--primary);
   letter-spacing: 2px;
   margin: 10px 0px;
+  font-family: var(--header-font);
 }
 
 :root {
@@ -795,4 +867,5 @@ nav button.active-events {
   --white: #fff;
   --bg: #e6effa;
   --container-padding: 30px 40px;
+  --header-font: "Momo Trust Display", sans-serif;
 }/*# sourceMappingURL=styles.css.map */

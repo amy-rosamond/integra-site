@@ -4,7 +4,8 @@
 header,
 footer {
     @include flexbox($justifyContent: space-between);
-    background-color: var(--white);
+    //bg color removed for page header blob
+    // background-color: var(--white);
     // padding: 22px 40px;
     padding: 15px 40px;
     // position: sticky;

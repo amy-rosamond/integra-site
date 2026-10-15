@@ -2,12 +2,13 @@
 
 :root {
     /* Dynamic size that scales beautifully between mobile and desktop */
-    --blob-size: clamp(280px, 45vw, 100%);
+    --blob-size: 80%;
 }
 
 .blob {
     &-container {
-        position: relative;
+        // position: relative;
+        position: static;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -27,9 +28,8 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            // border-radius: 42% 58% 52% 48% / 60% 40% 60% 40%;
-            // clip-path: shape(from 28.73% 17.18%,curve to 48.35% 8.95% with 37.45% 11.37%,smooth to 71.32% 9.71%,smooth to 82.75% 26.23%,smooth to 89.03% 49.67%,smooth to 91.01% 71.12%,smooth to 74.59% 86.41%,smooth to 52.96% 87.07%,smooth to 29.85% 85.29%,smooth to 14.60% 74.51%,smooth to 7.34% 51.06%,smooth to 11.18% 31.43%,smooth to 28.73% 17.18%);
-            clip-path: shape(from 88.22% 44.54%, curve to 92.71% 56.77% with 89.28% 50.00%, smooth to 92.55% 69.29%, smooth to 81.12% 75.95%, smooth to 69.43% 80.50%, smooth to 60.52% 86.03%, smooth to 49.65% 90.38%, smooth to 37.31% 92.46%, smooth to 26.11% 87.52%, smooth to 20.20% 76.45%, smooth to 17.59% 64.93%, smooth to 11.81% 54.96%, smooth to 6.23% 43.40%, smooth to 6.93% 30.16%, smooth to 14.86% 19.98%, smooth to 27.32% 15.40%, smooth to 38.64% 9.81%, smooth to 50.27% 3.37%, smooth to 61.72% 7.72%, smooth to 74.26% 13.48%, smooth to 85.42% 19.04%, smooth to 87.97% 32.08%, smooth to 88.22% 44.54%);
+            // clip-path: shape(from 88.22% 44.54%, curve to 92.71% 56.77% with 89.28% 50.00%, smooth to 92.55% 69.29%, smooth to 81.12% 75.95%, smooth to 69.43% 80.50%, smooth to 60.52% 86.03%, smooth to 49.65% 90.38%, smooth to 37.31% 92.46%, smooth to 26.11% 87.52%, smooth to 20.20% 76.45%, smooth to 17.59% 64.93%, smooth to 11.81% 54.96%, smooth to 6.23% 43.40%, smooth to 6.93% 30.16%, smooth to 14.86% 19.98%, smooth to 27.32% 15.40%, smooth to 38.64% 9.81%, smooth to 50.27% 3.37%, smooth to 61.72% 7.72%, smooth to 74.26% 13.48%, smooth to 85.42% 19.04%, smooth to 87.97% 32.08%, smooth to 88.22% 44.54%);
+            clip-path: shape(from 95.36% 43.67%,curve to 94.09% 55.95% with 97.63% 50.00%,smooth to 89.05% 68.02%,smooth to 80.86% 76.02%,smooth to 72.32% 86.34%,smooth to 63.64% 96.16%,smooth to 50.82% 91.85%,smooth to 38.53% 87.50%,smooth to 25.17% 87.84%,smooth to 18.77% 78.23%,smooth to 12.39% 66.37%,smooth to 3.40% 56.56%,smooth to 6.17% 44.25%,smooth to 13.70% 33.50%,smooth to 18.76% 22.51%,smooth to 25.80% 12.03%,smooth to 37.76% 11.09%,smooth to 50.83% 8.89%,smooth to 63.37% 4.66%,smooth to 72.63% 13.53%,smooth to 80.27% 24.09%,smooth to 89.19% 32.33%,smooth to 95.36% 43.67%);
 
             img {
                 width: 100%;
@@ -78,9 +78,8 @@
                     right: 21%;
                     background-color: var(--main);
                     z-index: 1;
-                    clip-path: shape(from 95.44% 40.82%, curve to 89.03% 56.52% with 96.57% 50.00%, smooth to 82.19% 72.97%, smooth to 73.76% 84.09%, smooth to 57.31% 89.62%, smooth to 43.82% 86.89%, smooth to 30.81% 77.93%, smooth to 16.77% 71.39%, smooth to 13.30% 58.37%, smooth to 12.06% 41.12%, smooth to 17.17% 29.73%, smooth to 29.25% 16.01%, smooth to 40.64% 2.53%, smooth to 56.84% 8.61%, smooth to 72.36% 17.97%, smooth to 87.67% 25.31%, smooth to 95.44% 40.82%);
+                    // clip-path: shape(from 95.44% 40.82%, curve to 89.03% 56.52% with 96.57% 50.00%, smooth to 82.19% 72.97%, smooth to 73.76% 84.09%, smooth to 57.31% 89.62%, smooth to 43.82% 86.89%, smooth to 30.81% 77.93%, smooth to 16.77% 71.39%, smooth to 13.30% 58.37%, smooth to 12.06% 41.12%, smooth to 17.17% 29.73%, smooth to 29.25% 16.01%, smooth to 40.64% 2.53%, smooth to 56.84% 8.61%, smooth to 72.36% 17.97%, smooth to 87.67% 25.31%, smooth to 95.44% 40.82%);
                     clip-path: shape(from 84.38% 42.55%, curve to 86.73% 58.43% with 82.78% 50.00%, smooth to 82.92% 71.00%, smooth to 71.66% 84.51%, smooth to 59.09% 90.22%, smooth to 40.73% 90.66%, smooth to 28.47% 84.63%, smooth to 20.50% 69.40%, smooth to 11.92% 57.14%, smooth to 12.19% 42.97%, smooth to 17.75% 27.69%, smooth to 25.81% 13.20%, smooth to 41.09% 10.47%, smooth to 57.68% 13.44%, smooth to 70.60% 18.54%, smooth to 80.90% 29.64%, smooth to 84.38% 42.55%);
-
                 }
             }
         }

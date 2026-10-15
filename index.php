@@ -28,7 +28,7 @@ include('includes/components/box-list-class.php');
             <div class="blob blob-right-top"></div>
 
             <div class="blob-img">
-                <img src="https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/people/people-2.jpg" alt="Speaker at conference">
+                <img src="https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/events/radisson-blu-sheffield.jpg" alt="Speaker at conference">
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@ include('includes/components/box-list-class.php');
 
         $workshops = new BoxListItem(
             file_get_contents(__DIR__ . '/img/svg-icon/light-bulb.svg'),
-            'User Days',
+            'Workshops',
             'Hands-on sessions designed to build skills, solve real challenges and drive practical results.',
             '#'
         );

@@ -9,6 +9,14 @@
     @include flexbox($placeContent: left, $placeItems: left, $direction: column);
     padding: var(--container-padding);
 
+    &:not(:has(.container-divide-img, .container-divide)) {
+        .page-header {
+            p {
+                max-width: unset;
+            }
+        }
+    }
+
     &-light {
         background-color: var(--bg);
     }
@@ -111,8 +119,12 @@
         }
 
         .blob-container {
-            bottom: 80px;
-            z-index: 99999;
+            // bottom: 80px;
+            // z-index: 99999;
+            // transform: translate(0px, -80px);
+            transform: translate(0px, -50px);
+            // display: flex;
+            // justify-content: end;
 
             &-full-height {
                 bottom: 0px !important;
@@ -122,32 +134,68 @@
 
         &-img {
             width: 50%;
+            height: fit-content;
+            // height: 90%;
 
             img {
                 width: 100%;
             }
         }
 
+        &-img:has(.logo) {
+            display: flex;
+            justify-content: center;
+
+            .logo {
+                max-width: 500px;
+                float: right;
+                padding-right: 20px;
+            }
+        }
+
         @media only screen and (max-width: 1000px) {
+            .blob-container {
+                // bottom: 0px;
+                transform: translate(0px, -18px);
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
             flex-direction: column;
+            padding: var(--container-padding);
 
             .blob-container {
-                bottom: 0px;
+                // bottom: 0px;
+                padding-top: 0px;
+                width: 100%;
             }
 
             &-img {
                 width: 100%;
-                // background image set on element
-                background-position: 20% 50%;
-                height: fit-content;
+                display: flex;
+                align-items: center;
+            }
+
+            &-img:has(.logo) {
+                justify-content: start;
+
+                .logo {
+                    max-width: 200px;
+                }
             }
 
             .page-header {
                 width: 100%;
+                padding: 0;
 
                 p {
                     max-width: 500px;
                 }
+            }
+
+            :root {
+                /* Dynamic size that scales beautifully between mobile and desktop */
+                --blob-size: 100%;
             }
         }
     }

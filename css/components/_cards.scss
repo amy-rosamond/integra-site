@@ -12,26 +12,75 @@
     }
 
     div {
+        //outside box
         @include flexbox($direction: column);
-        max-width: 350px;
-        width: 100%;
-        border: 1px solid #d2d3dd;
+        // max-width: 350px;
+        // width: 100%;
+        border: 1px solid var(--secondary);
+        border-radius: 10px;
         margin: 5px;
-        flex: 1;
-        height: fit-content;
+        // flex: 1;
+        // flex-basis: 350px;
+        flex: 1 1 350px;
+        // height: fit-content;
+        background-color: #fff;
+
+        img {
+            height: 235px;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 9px 9px 0px 0px;
+        }
 
         div {
+            //lower half of the card (whole white section)
             border: 0px solid var(--white);
-            padding: 20px 10px 20px;
+            padding: 20px 20px 20px;
             background-color: var(--white);
             margin: 0px;
             flex: unset;
             height: fit-content;
             justify-content: space-between;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
 
             div {
-                height: fit-content;
-                padding: 0px 10px;
+                //date blob
+                // height 0 so it doesn't distrupt the flow of the other elements
+                height: 0px;
+                // padding inline 0 so blob aligns vertically
+                padding: 15px 0;
+
+                p,
+                span {
+                    // relative to move it up and out the way of the other text
+                    position: relative;
+                    bottom: 88px;
+                    right: 5px;
+                    background-color: var(--secondary);
+                    width: 100px;
+                    clip-path: shape(from 88.59% 45.00%, curve to 95.01% 56.88% with 93.14% 50.00%, smooth to 88.16% 66.35%, smooth to 80.76% 77.97%, smooth to 74.43% 86.89%, smooth to 61.13% 87.44%, smooth to 49.55% 91.27%, smooth to 37.50% 92.59%, smooth to 25.85% 87.51%, smooth to 18.71% 77.70%, smooth to 13.28% 66.53%, smooth to 5.97% 55.95%, smooth to 8.38% 44.75%, smooth to 12.37% 32.05%, smooth to 16.06% 20.95%, smooth to 25.76% 11.60%, smooth to 36.50% 4.11%, smooth to 49.80% 3.72%, smooth to 62.94% 6.28%, smooth to 75.13% 10.94%, smooth to 82.96% 20.94%, smooth to 84.57% 33.72%, smooth to 88.59% 45.00%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 20px;
+                    width: 100px;
+                    text-align: center;
+                    line-height: 18px;
+                    //make sure it is one word per line
+                    word-spacing: 1000px;
+
+                    svg {
+                        width: 50px;
+                        stroke-width: .8px;
+
+                    }
+                }
+
+                span {
+                    bottom: 71px;
+                    clip-path: shape(from 95.07% 43.66%,curve to 91.00% 55.14% with 96.99% 50.00%,smooth to 85.70% 66.83%,smooth to 83.39% 79.23%,smooth to 72.73% 84.04%,smooth to 61.06% 90.99%,smooth to 50.65% 94.46%,smooth to 38.75% 88.32%,smooth to 29.34% 82.52%,smooth to 22.89% 73.70%,smooth to 12.17% 66.28%,smooth to 7.29% 56.75%,smooth to 9.68% 43.95%,smooth to 14.35% 34.28%,smooth to 23.42% 27.02%,smooth to 30.39% 19.00%,smooth to 38.45% 8.12%,smooth to 49.28% 6.63%,smooth to 60.04% 14.88%,smooth to 72.71% 16.26%,smooth to 85.37% 19.38%,smooth to 91.52% 30.85%,smooth to 95.07% 43.66%);
+                }
             }
 
             p {
@@ -45,7 +94,7 @@
                 }
             }
 
-            p:first-child {
+            small {
                 text-transform: uppercase;
                 color: var(--primary);
                 letter-spacing: 1.5px;
@@ -69,7 +118,7 @@
                 align-self: start;
                 padding: 0px 10px;
                 height: 35px;
-
+                margin-inline: 0px;
 
                 svg {
                     width: 30px;

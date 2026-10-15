@@ -2,7 +2,7 @@
 @use '../components/mixins' as *;
 
 * {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: "Kanit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -32,10 +32,15 @@ h2 {
 
 h1,
 h2 {
+    font-family: var(--header-font);
     letter-spacing: 1px;
     font-weight: 600;
     -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+h3 {
+    font-family: var(--header-font);
 }
 
 h1,

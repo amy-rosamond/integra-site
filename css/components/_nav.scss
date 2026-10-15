@@ -25,10 +25,16 @@ nav {
         @include underline;
     }
 
+
+    button {
+        font-size: 14px !important;
+    }
+
     a.active,
     button.active,
     a.active-events,
     button.active-events {
+        background-image: linear-gradient(var(--main), var(--main)) !important;
         background-size: 100% 100%;
         color: var(--white);
     }
