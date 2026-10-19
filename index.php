@@ -68,7 +68,7 @@ include('includes/components/box-list-class.php');
 </div>
 
 <div class="container container-divide-img">
-    <div class="container-divide-img-img">
+    <div class="container-divide-img-img" style="padding-bottom: 80px;">
         <svg width="0" height="0" style="position: absolute;">
             <defs>
                 <clipPath id="wave-image-clip" clipPathUnits="objectBoundingBox">
@@ -94,12 +94,11 @@ include('includes/components/box-list-class.php');
         </div>
     </div>
     <div class="page-header">
-        <h1>Conferences, <br>User Days & <br>Workshops.</h1>
-        <small>Real connections. Shared Knowledge.<br>Lasting impact.</small>
-        <p>Integra is the User Group for Advanced e5 & Collaborative Planning users, and other associated software customers. It is an independent, self-funding, non-profit making organisation run by a committee of members, which supports its members’ interests by sharing best practice and innovative ideas, facilitating jointly funded software developments and arranging workshops and meetings.</p>
-        <!-- <p>The main aim of the group is to promote and maintain a healthy dialogue between Advanced, associated third party suppliers, and their users; ensuring that the suppliers understand what their users need and want and initiating and developing networking relationships between members.</p> -->
+        <small>Our Aims</small>
+        <h1>What we're here to <br>achieve</h1>
+        <p>The main aim of the group is to promote and maintain a healthy dialogue between Advanced, associated third party suppliers, and their users; ensuring that the suppliers understand what their users need and want and initiating and developing networking relationships between members.</p>
         <div>
-            <a href="events.php" class="a-btn a-btn-bg">Explore our events</a>
+            <a href="aims.php" class="a-btn a-btn-bg">More information</a>
         </div>
     </div>
 </div>

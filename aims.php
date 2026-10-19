@@ -7,9 +7,8 @@
 include('header.php');
 
 
-include('includes/components/box-list-class.php');
+// include('includes/components/box-list-class.php');
 include('includes/components/cards-class.php');
-include('includes/events/events-array.php');
 
 ?>
 
@@ -34,7 +33,19 @@ include('includes/events/events-array.php');
         </div>
     </div>
 </div>
-<div id="eventsContainer" class="container container-light">
+
+<div class="container container-light container-divide-img">
+    <div class="page-header">
+        <small>Our Key Aims</small>
+        <h2>What we're here to achieve</h2>
+        <p>Through our aims, resources, and network we aim to:</p>
+        <!-- <div>
+            <a href="https://www.eventbooking.uk.com/integra/?" class="a-btn a-btn-bg-hover">Apply Now</a>
+            <a href="https://www.eventbooking.uk.com/integra/?" class="a-btn a-btn-bg">Sign In Here</a>
+        </div> -->
+    </div>
+</div>
+<div id="eventsContainer" class="container container-light" style="padding-top: 0px;">
     <div class="cards">
         <?php
 
@@ -95,6 +106,43 @@ include('includes/events/events-array.php');
         $midYearMeeting->get_details();
 
         ?>
+    </div>
+</div>
+
+<div class="container container-divide-img">
+    <div class="page-header">
+        <h1>The Bigger Picture.</h1>
+        <small>Our Impact</small>
+        <p>By bringing people together and sharing knowledge, we help our members stay ahead, find new opportunities, and contribute to a stronger, more connected industry.</p>
+        <!-- <p>The main aim of the group is to promote and maintain a healthy dialogue between Advanced, associated third party suppliers, and their users; ensuring that the suppliers understand what their users need and want and initiating and developing networking relationships between members.</p> -->
+        <div>
+            <a href="contact.php" class="a-btn a-btn-bg">Get in Touch</a>
+        </div>
+    </div>
+    <div class="container-divide-img-img" style="transform: scaleX(-1);padding-bottom: 100px;width: 40%;">
+        <svg width="0" height="0" style="position: absolute;">
+            <defs>
+                <clipPath id="wave-image-clip" clipPathUnits="objectBoundingBox">
+                    <!-- 
+                    Coordinates normalized from 0.0 to 1.0:
+                    Top-Left -> Top-Right Curve -> S-Curve Bottom Edge -> Back to Top-Left
+                    -->
+                    <path d="M 0,0 
+                    L 0.8,0 
+                    C 0.95,0 1.0,0.1 1.0,0.25 
+                    C 1.0,0.4 0.92,0.5 0.8,0.65 
+                    C 0.65,0.85 0.35,0.7 0,1.0 
+                    Z" />
+                </clipPath>
+            </defs>
+        </svg>
+        <div class="blob-container-full-height">
+            <div class="blob-img">
+                <img src="https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/people/people-2.jpg" alt="Speaker at conference">
+            </div>
+            <div class="blob-background"></div>
+            <div class="blob-background"></div>
+        </div>
     </div>
 </div>
 

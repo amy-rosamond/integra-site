@@ -107,7 +107,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 h1,
@@ -150,6 +150,7 @@ a {
   background-size: 0 0.1em;
   background-position: 50% 100%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 a:hover {
   text-decoration: none;
@@ -309,14 +310,19 @@ a:focus {
 @media only screen and (max-width: 800px) {
   .container-divide-img {
     flex-direction: column;
+  }
+  .container-divide-img:has(.blob-container) {
     padding: var(--container-padding);
+  }
+  .container-divide-img:has(.blob-container) .page-header {
+    padding: 0px;
   }
   .container-divide-img .blob-container {
     padding-top: 0px;
     width: 100%;
   }
   .container-divide-img-img {
-    width: 100%;
+    width: 100% !important;
     display: flex;
     align-items: center;
   }
@@ -328,7 +334,6 @@ a:focus {
   }
   .container-divide-img .page-header {
     width: 100%;
-    padding: 0;
   }
   .container-divide-img .page-header p {
     max-width: 500px;
@@ -451,7 +456,7 @@ footer .a-btn {
 footer {
   position: unset;
   background-color: var(--main);
-  align-content: center;
+  align-items: center;
 }
 footer nav {
   align-self: center;
@@ -735,6 +740,7 @@ footer .a-btn:hover {
 .cards div div p {
   margin: 5px 0px;
   display: flex;
+  flex-direction: column;
   font-size: 14px;
 }
 .cards div div p svg {
@@ -766,6 +772,19 @@ footer .a-btn:hover {
 }
 .cards div div a svg {
   width: 30px;
+}
+.cards-text-a {
+  all: unset !important;
+  color: var(--primary) !important;
+  font-weight: 600 !important;
+  font-family: "Kanit", sans-serif !important;
+  letter-spacing: 1px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease-in-out !important;
+}
+.cards-text-a:hover {
+  color: var(--main) !important;
+  transition: all 0.3s ease-in-out !important;
 }
 
 nav {

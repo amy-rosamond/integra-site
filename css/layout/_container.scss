@@ -162,7 +162,14 @@
 
         @media only screen and (max-width: 800px) {
             flex-direction: column;
-            padding: var(--container-padding);
+
+            &:has(.blob-container) {
+                padding: var(--container-padding);
+
+                .page-header {
+                    padding: 0px;
+                }
+            }
 
             .blob-container {
                 // bottom: 0px;
@@ -171,7 +178,7 @@
             }
 
             &-img {
-                width: 100%;
+                width: 100% !important;
                 display: flex;
                 align-items: center;
             }
@@ -186,7 +193,7 @@
 
             .page-header {
                 width: 100%;
-                padding: 0;
+                // padding: 0;
 
                 p {
                     max-width: 500px;

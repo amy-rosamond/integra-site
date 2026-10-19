@@ -1,5 +1,5 @@
 <footer>
-    <div><img src="https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/logos/integra-dark.png" alt="Integra"></div>
+    <div><img src="https://evbk-public.s3-eu-west-1.amazonaws.com/integra/website/img/logos/integra-partner-logo.webp" alt="Integra"></div>
 
     <nav id="nav" class="scale-up-center">
         <?php
@@ -36,5 +36,6 @@
 
     </nav>
 
+    <div id="contactBtn"><a href="contact.php" class="a-btn a-btn-bg">Sign in</a></div>
     <div id="contactBtn"><a href="contact.php" class="a-btn a-btn-bg">Get in touch</a></div>
 </footer>
